@@ -1,75 +1,65 @@
-# React + TypeScript + Vite
+# Multi-brand design system
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An open-source React component library built on design tokens. One set of components, themed for three brands (Pepsi, Lay’s and Starbucks), each in light and dark mode.
 
-Currently, two official plugins are available:
+The tokens come from the Semantics variables in Figma, so the code and the design file stay in sync.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Live Storybook:** https://YOUR-GITHUB-USERNAME.github.io/multi-brand-design-system/
 
-## React Compiler
+## Components
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+| Component | Status |
+| --- | --- |
+| Button (primary, secondary, tertiary; sm, md, lg; leading and trailing icons) | Ready |
+| Input, Checkbox, Radio, OTP box | Planned |
 
-## Expanding the ESLint configuration
+## Getting started
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+You need [Node.js](https://nodejs.org) (LTS version) and Git.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+git clone https://github.com/YOUR-GITHUB-USERNAME/multi-brand-design-system.git
+cd multi-brand-design-system
+npm install
+npm run storybook
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Storybook opens at http://localhost:6006. Use the **Brand** and **Mode** dropdowns in the toolbar to switch themes.
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+## Using a component
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Import the tokens once, set the brand and mode on the root element, then use the components.
+
+```tsx
+import './tokens/tokens.css';
+import { Button } from './components/Button/Button';
+
+document.documentElement.dataset.brand = 'pepsi'; // 'pepsi' | 'lays' | 'starbucks'
+document.documentElement.dataset.mode = 'light';  // 'light' | 'dark'
+
+<Button variant="primary" size="md">Continue</Button>
+```
+
+## Project structure
 
 ```
+.storybook/              Storybook setup, including the brand and mode switcher
+src/tokens/tokens.css    Design tokens: one block per brand and mode
+src/components/          One folder per component (code, styles, stories)
+```
+
+## Design tokens
+
+Tokens are CSS variables named by role, for example `--surface-action`, `--text-on-action` and `--border-focused`. Each brand and mode defines its own values under `[data-brand="…"][data-mode="…"]` in `src/tokens/tokens.css`. Components only use these variables and never hardcoded colours.
+
+## Accessibility
+
+Every component has a visible keyboard focus state and a disabled state. The Storybook accessibility panel is enabled so you can check contrast and other issues for each story.
+
+## Contributing
+
+Contributions are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## License
+
+See the [LICENSE](LICENSE) file.
