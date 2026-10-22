@@ -1,0 +1,140 @@
+/* Design tokens. One block per brand and mode.
+   Values come from the Semantics collection in Figma. */
+
+[data-brand="pepsi"][data-mode="light"] {
+  --surface-base: #ffffff;
+  --surface-soft: #f8f9fc;
+  --surface-action: #0000fe;
+  --surface-action-hover: #0000fe;
+  --surface-action-focused: #0000fe;
+  --surface-action-subtle: #e5e5ff;
+  --surface-disabled: #cdd1dc;
+  --text-on-action: #f8f9fc;
+  --text-disable-surface: #f8f9fc;
+  --text-action: #0000fe;
+  --text-action-hover: #0000fe;
+  --text-action-focus: #0000fe;
+  --text-disabled: #cdd1dc;
+  --text-strong: #303647;
+  --text-base: #6f7587;
+  --border-action: #0000fe;
+  --border-hover: #0000fe;
+  --border-focused: #0000fe;
+  --border-base: #cdd1dc;
+  --border-soft: #f0f2f7;
+}
+
+[data-brand="pepsi"][data-mode="dark"] {
+  --surface-base: #000019;
+  --surface-soft: #000033;
+  --surface-action: #0000fe;
+  --surface-action-hover: #0000cb;
+  --surface-action-focused: #000098;
+  --surface-action-subtle: #000033;
+  --surface-disabled: #505669;
+  --text-on-action: #ffffff;
+  --text-disable-surface: #b2b7c5;
+  --text-action: #9999ff;
+  --text-action-hover: #ccccff;
+  --text-action-focus: #e5e5ff;
+  --text-disabled: #b2b7c5;
+  --text-strong: #f8f9fc;
+  --text-base: #f0f2f7;
+  --border-action: #9999ff;
+  --border-hover: #ccccff;
+  --border-focused: #e5e5ff;
+  --border-base: #b2b7c5;
+  --border-soft: #6f7587;
+}
+
+[data-brand="lays"][data-mode="light"] {
+  --surface-base: #ffffff;
+  --surface-soft: #fafaf5;
+  --surface-action: #ffe600;
+  --surface-action-hover: #ffe600;
+  --surface-action-focused: #ffe600;
+  --surface-action-subtle: #fffce5;
+  --surface-disabled: #d2d0c0;
+  --text-on-action: #fafaf5;
+  --text-disable-surface: #fafaf5;
+  --text-action: #ffe600;
+  --text-action-hover: #ffe600;
+  --text-action-focus: #ffe600;
+  --text-disabled: #d2d0c0;
+  --text-strong: #37362d;
+  --text-base: #777568;
+  --border-action: #ffe600;
+  --border-hover: #ffe600;
+  --border-focused: #ffe600;
+  --border-base: #d2d0c0;
+  --border-soft: #f3f2e8;
+}
+
+[data-brand="lays"][data-mode="dark"] {
+  --surface-base: #1a1700;
+  --surface-soft: #332e00;
+  --surface-action: #ffe600;
+  --surface-action-hover: #ccb800;
+  --surface-action-focused: #998a00;
+  --surface-action-subtle: #332e00;
+  --surface-disabled: #575548;
+  --text-on-action: #000000;
+  --text-disable-surface: #b8b6a5;
+  --text-action: #ffe600;
+  --text-action-hover: #ffeb33;
+  --text-action-focus: #fff066;
+  --text-disabled: #b8b6a5;
+  --text-strong: #fafaf5;
+  --text-base: #f3f2e8;
+  --border-action: #ffe600;
+  --border-hover: #ffeb33;
+  --border-focused: #fff066;
+  --border-base: #b8b6a5;
+  --border-soft: #777568;
+}
+
+[data-brand="starbucks"][data-mode="light"] {
+  --surface-base: #ffffff;
+  --surface-soft: #f7f9f7;
+  --surface-action: #006241;
+  --surface-action-hover: #006241;
+  --surface-action-focused: #006241;
+  --surface-action-subtle: #e5efec;
+  --surface-disabled: #cdd5d1;
+  --text-on-action: #f7f9f7;
+  --text-disable-surface: #f7f9f7;
+  --text-action: #006241;
+  --text-action-hover: #006241;
+  --text-action-focus: #006241;
+  --text-disabled: #cdd5d1;
+  --text-strong: #303c37;
+  --text-base: #6d7974;
+  --border-action: #006241;
+  --border-hover: #006241;
+  --border-focused: #006241;
+  --border-base: #cdd5d1;
+  --border-soft: #eef2ef;
+}
+
+[data-brand="starbucks"][data-mode="dark"] {
+  --surface-base: #000a06;
+  --surface-soft: #00140d;
+  --surface-action: #006241;
+  --surface-action-hover: #004e34;
+  --surface-action-focused: #003b27;
+  --surface-action-subtle: #00140d;
+  --surface-disabled: #505c57;
+  --text-on-action: #ffffff;
+  --text-disable-surface: #b3bdb8;
+  --text-action: #99c0b3;
+  --text-action-hover: #cce0d9;
+  --text-action-focus: #e5efec;
+  --text-disabled: #b3bdb8;
+  --text-strong: #f7f9f7;
+  --text-base: #eef2ef;
+  --border-action: #99c0b3;
+  --border-hover: #cce0d9;
+  --border-focused: #e5efec;
+  --border-base: #b3bdb8;
+  --border-soft: #6d7974;
+}

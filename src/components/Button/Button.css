@@ -1,0 +1,45 @@
+.ds-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 16px 12px;
+  font: 500 16px/20px 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  background: transparent;
+  color: var(--text-action);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+.ds-btn[data-size='sm'] { padding: 8px 12px; font-size: 14px; }
+.ds-btn[data-size='lg'] { padding: 20px 16px; font-size: 18px; line-height: 24px; }
+.ds-btn svg { width: 20px; height: 20px; flex: none; }
+
+.ds-btn:focus-visible { outline: 2px solid var(--border-focused); outline-offset: 2px; }
+
+/* Primary */
+.ds-btn[data-variant='primary'] { background: var(--surface-action); color: var(--text-on-action); }
+.ds-btn[data-variant='primary']:hover { background: var(--surface-action-hover); }
+.ds-btn[data-variant='primary']:focus-visible,
+.ds-btn[data-variant='primary']:active { background: var(--surface-action-focused); }
+
+/* Secondary */
+.ds-btn[data-variant='secondary'] { border-color: var(--border-action); color: var(--text-action); }
+.ds-btn[data-variant='secondary']:hover {
+  border-color: var(--border-hover); color: var(--text-action-hover); background: var(--surface-action-subtle);
+}
+.ds-btn[data-variant='secondary']:focus-visible,
+.ds-btn[data-variant='secondary']:active { border-color: var(--border-focused); color: var(--text-action-focus); }
+
+/* Tertiary */
+.ds-btn[data-variant='tertiary']:hover { color: var(--text-action-hover); background: var(--surface-action-subtle); }
+.ds-btn[data-variant='tertiary']:focus-visible,
+.ds-btn[data-variant='tertiary']:active { color: var(--text-action-focus); }
+
+/* Disabled */
+.ds-btn:disabled { cursor: not-allowed; pointer-events: none; }
+.ds-btn[data-variant='primary']:disabled { background: var(--surface-disabled); color: var(--text-disable-surface); }
+.ds-btn[data-variant='secondary']:disabled { background: transparent; border-color: var(--border-base); color: var(--text-disabled); }
+.ds-btn[data-variant='tertiary']:disabled { background: transparent; color: var(--text-disabled); }
