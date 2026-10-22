@@ -4,7 +4,7 @@ An open-source React component library built on design tokens. One set of compon
 
 The tokens come from the Semantics variables in Figma, so the code and the design file stay in sync.
 
-**Live Storybook:** https://YOUR-GITHUB-USERNAME.github.io/multi-brand-design-system/
+**Live Storybook:** https://bhavyaux.github.io/multi-brand-design-system/
 
 ## Components
 
@@ -18,7 +18,7 @@ The tokens come from the Semantics variables in Figma, so the code and the desig
 You need [Node.js](https://nodejs.org) (LTS version) and Git.
 
 ```bash
-git clone https://github.com/YOUR-GITHUB-USERNAME/multi-brand-design-system.git
+git clone https://github.com/bhavyaux/multi-brand-design-system.git
 cd multi-brand-design-system
 npm install
 npm run storybook
