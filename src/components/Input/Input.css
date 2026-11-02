@@ -1,0 +1,96 @@
+/* Values from the Input variables in Figma:
+   gap 8, padding 12, radius 8, border 1, Montreal (Label S/M/L Regular). */
+.ds-input {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+  max-width: 360px;
+  font-family: 'Montreal', 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  font-weight: 400;
+}
+
+.ds-input__label-row {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-soft);
+}
+.ds-input__label-row svg { width: 16px; height: 16px; flex: none; }
+
+.ds-input__label {
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--text-strong);
+}
+
+.ds-input__field {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  border: 1px solid var(--border-base);
+  border-radius: 8px;
+  background: var(--surface-soft);
+  color: var(--text-soft);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.ds-input__field svg { width: 20px; height: 20px; flex: none; }
+
+/* Trailing action (e.g. tertiary Button). Negative margins keep the field height unchanged. */
+.ds-input__action { display: flex; flex: none; }
+.ds-input__action .ds-btn {
+  padding: 6px 8px;
+  margin: -6px -8px -6px 0;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.ds-input__control {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  font: inherit;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--text-strong);
+  outline: none;
+}
+.ds-input__control::placeholder { color: var(--text-soft); opacity: 1; }
+
+.ds-input__message {
+  margin: 0;
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--text-base);
+}
+
+/* Hover and focus */
+.ds-input__field:hover { border-color: var(--border-hover); }
+.ds-input__field:focus-within {
+  border-color: var(--border-action);
+  box-shadow: 0 0 0 1px var(--border-action);
+}
+
+/* Error */
+.ds-input[data-error] .ds-input__field { border-color: var(--border-error); }
+.ds-input[data-error] .ds-input__field:focus-within { box-shadow: 0 0 0 1px var(--border-error); }
+.ds-input[data-error] .ds-input__message { color: var(--text-error); }
+
+/* Disabled */
+.ds-input[data-disabled] .ds-input__field {
+  background: var(--surface-strong);
+  border-color: var(--border-base);
+  color: var(--text-disabled);
+  cursor: not-allowed;
+}
+.ds-input[data-disabled] .ds-input__label-row,
+.ds-input[data-disabled] .ds-input__label,
+.ds-input[data-disabled] .ds-input__message,
+.ds-input[data-disabled] .ds-input__control,
+.ds-input[data-disabled] .ds-input__control::placeholder { color: var(--text-disabled); }
+.ds-input[data-disabled] .ds-input__control { cursor: not-allowed; }

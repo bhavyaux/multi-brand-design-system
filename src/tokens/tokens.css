@@ -22,6 +22,10 @@
   --border-focused: #0000fe;
   --border-base: #cdd1dc;
   --border-soft: #f0f2f7;
+  --surface-strong: #f0f2f7;
+  --text-soft: #9298a8;
+  --text-error: #c0392b;
+  --border-error: #e74c3c;
 }
 
 [data-brand="pepsi"][data-mode="dark"] {
@@ -45,6 +49,11 @@
   --border-focused: #e5e5ff;
   --border-base: #b2b7c5;
   --border-soft: #6f7587;
+  /* Input tokens below: estimated, not yet confirmed in Figma */
+  --surface-strong: #505669;
+  --text-soft: #9298a8;
+  --text-error: #f1948a;
+  --border-error: #ec7063;
 }
 
 [data-brand="lays"][data-mode="light"] {
@@ -68,6 +77,11 @@
   --border-focused: #ffe600;
   --border-base: #d2d0c0;
   --border-soft: #f3f2e8;
+  /* Input tokens below: estimated, not yet confirmed in Figma */
+  --surface-strong: #f3f2e8;
+  --text-soft: #99978a;
+  --text-error: #c0392b;
+  --border-error: #e74c3c;
 }
 
 [data-brand="lays"][data-mode="dark"] {
@@ -91,6 +105,11 @@
   --border-focused: #fff066;
   --border-base: #b8b6a5;
   --border-soft: #777568;
+  /* Input tokens below: estimated, not yet confirmed in Figma */
+  --surface-strong: #575548;
+  --text-soft: #99978a;
+  --text-error: #f1948a;
+  --border-error: #ec7063;
 }
 
 [data-brand="starbucks"][data-mode="light"] {
@@ -114,6 +133,11 @@
   --border-focused: #006241;
   --border-base: #cdd5d1;
   --border-soft: #eef2ef;
+  /* Input tokens below: estimated, not yet confirmed in Figma */
+  --surface-strong: #eef2ef;
+  --text-soft: #909b96;
+  --text-error: #c0392b;
+  --border-error: #e74c3c;
 }
 
 [data-brand="starbucks"][data-mode="dark"] {
@@ -137,4 +161,9 @@
   --border-focused: #e5efec;
   --border-base: #b3bdb8;
   --border-soft: #6d7974;
+  /* Input tokens below: estimated, not yet confirmed in Figma */
+  --surface-strong: #505c57;
+  --text-soft: #909b96;
+  --text-error: #f1948a;
+  --border-error: #ec7063;
 }
